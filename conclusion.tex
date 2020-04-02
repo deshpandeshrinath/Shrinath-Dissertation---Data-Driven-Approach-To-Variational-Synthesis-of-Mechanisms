@@ -1,0 +1,12 @@
+\chapter{Conclusion}
+
+The primary contribution of the dissertation is in the development of a data-driven computational framework that combines deep generative models with mechanism synthesis algorithms. Deep learning was used to learn the meaningful representations of linkage parameters and used in a novel way to enhance the users' design experience. This approach derives from the existing kinematic knowledge to create a new framework for mechanism synthesis, which solves problems that have had no good theoretical underpinning, such as defect-free generation, conditioning of the input, and contextual concept generation. 
+
+This is achieved by learning the probability distribution of various linkage parameters and their interdependence to perform useful inference tasks. The inference capabilities of the generative model are used to intelligently modify the synthesis task to enhance the prolificacy and robustness of precision-point based synthesis algorithms.  We define this approach, where the input uncertainty is intelligently managed to generate a distribution of solutions, as \emph{Variational Synthesis of Mechanisms}
+
+In addition to the general framework, this paper also presents a novel image-based approach for path generation, which is particularly amenable to mechanism synthesis when the input from mechanism designers is deliberately imprecise or inherently uncertain due to the nature of the problem. It models the input curve as a probability distribution of image pixels and employs a probabilistic generative model to capture the inherent uncertainty in the input. In addition, it gives feedback on the input quality and provides corrections for a more conducive input. The image representation allows for capturing local spatial correlations, which plays an important role in finding a variety of solutions with similar semantics as the input curve. The purpose is to obtain a diverse set of acceptable solutions instead of finding a single optimal solution for an inherently uncertain input.
+
+
+The approach is independent of linkage topology. The approach is general enough to be extended to spatial linkages for which there are even fewer synthesis methods available. In addition, an alternate synthesis approach using End-to-End deep learning models is presented which captures the conditional distribution of linkage parameters and the task.  
+
+

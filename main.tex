@@ -1,0 +1,142 @@
+\documentclass[defaultstyle,12pt]{thesis}
+\newcommand{\gbf}[1] {\mbox{\boldmath${#1}$\unboldmath}}
+\newcommand{\R}{\hbox{I \kern -.5em R}}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{color}
+\usepackage{wrapfig}
+\usepackage[hidelinks]{hyperref}
+\usepackage{subfigure}
+\usepackage{url}
+\urlstyle{same}
+\usepackage{caption}
+\usepackage{algorithmicx}
+\usepackage{amsmath}
+\usepackage[linesnumbered,ruled]{algorithm2e}
+\usepackage{amssymb}		% to get all AMS symbols
+\usepackage[noend]{algpseudocode}
+\usepackage{acro}
+
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = blue, %Colour of internal links
+  citecolor   = blue %Colour of citations
+}
+% for displaying argmin command
+\DeclareMathOperator*{\argminA}{arg\,min}
+
+\def \Pluckerian{Pl\"uckerian }
+\def \Plucker{Pl\"ucker }
+\def \plucker{Pl\"ucker}
+\def \Bezier{B\'{e}zier }
+\def \BEZIER{B\'{E}ZIER }
+\def \Shrocker{Schr\ddot{o}cker}
+
+
+
+
+%%%%%%%%%%%%   All the preamble material:   %%%%%%%%%%%%
+
+\title{Data-Driven Approach To Variational Synthesis of Mechanisms}
+
+\author{Shrinath}{Deshpande}
+
+\degree{Doctor of Philosophy}		%  #1 {long descr.}
+	{Ph.D., Mechanical Engineering}		%  #2 {short descr.}
+
+\dept{Department of}			%  #1 {designation}
+	{Mechanical Engineering}		%  #2 {name}
+
+\advisor{Professor, Mechanical Engineering}				%  #1 {title}
+	{Dr.~Anurag Purwar}			%  #2 {name}
+\defchair{Professor, Mechanical Engineering}				%  #1 {title}
+{Dr.~Jeff Ge}			%  #2 {name}
+\reader{Professor, Mechanical Engineering}{Dr.~Imin Kao}		%  2nd person to sign thesis
+\readerThree{Professor, Mechanical Engineering}{Dr.~Nilanjan Chakraborty}		%  3rd person to sign thesis
+\readerFour{Professor, Computer Science}{Dr.~Niranjan Balasubramanian}		%  4th person to sign thesis
+
+\degreeyear{2020}{May}
+
+\abstract{ 
+Kinematic synthesis of mechanisms is an important phase in the conceptual design of machines. This requires the synthesis to be prolific in terms of concept generation to realize the potential of attainable design possibilities and to have the agility to adapt a design to evolving requirements. The goal of this research is to advance the science of kinematic synthesis by bringing together machine learning and theoretical kinematics to create a data-driven computational framework for kinematic synthesis of mechanisms.
+ 
+At the heart of this novel framework lies a probabilistic generative model that learns joint probability distribution of various linkage parameters and their interdependence to perform useful inference tasks. In doing so, we leverage the emerging machine learning techniques to learn meaningful representations and combine them with simultaneous type and dimensional methods of kinematic synthesis to enhance users' computational creativity.  The approach is particularly amenable to mechanism synthesis when the input from mechanism designers is deliberately imprecise or inherently uncertain due to the nature of the problem. The approach models the input as a probability distribution and employs a deep generative model to capture the inherent uncertainty in the input. In addition, it gives feedback on the input quality and provides corrections for a more conducive input. Lastly, the outputs are post-processed and the designer is presented with a set of distributions of solutions, where each set consists of a concept with different variations. We define this approach, where the input uncertainty is intelligently managed to generate a distribution of solutions as Variational Synthesis of Mechanisms.
+	}
+
+
+\dedication[Dedication]{	% NEVER use \OnePageChapter here.
+	I dedicate this dissertation to the ladies of my life. First, I dedicate this to my beloved wife Prerna, who made great sacrifices so that we could be together during this challenging journey. Second, I dedicate this thesis to my grandma, who practically raised me. Third, I dedicate this to my mother, who has given her all for the family.
+	}
+
+\acknowledgements{	\OnePageChapter	% *MUST* BE ONLY ONE PAGE!
+Undertaking this Ph.D. has been a life-changing experience for me and it would not
+have been possible to do without the support and guidance that I received from many
+people.  
+
+Working under the guidance of Prof. Anurag Purwar has been an amazing experience. I was fortunate to have him as my advisor. His approach to problem-solving and attention to detail have an everlasting impact on me and my work. 
+It is due to his trust and constant support that I was able to research an area new to our research community.
+His patience and enthusiasm helped me in a great deal throughout my research. I express my sincere gratitude to my adviser and mentor.
+
+I am grateful to Prof. Q Jeffrey Ge and Prof.~Nilanjan Chakraborty for their continuous guidance and support from the beginning. I express my gratitude to Prof.~Imin Kao, Prof.~Niranjan Balasubramanian for their presence on the thesis committee.
+
+This work is standing on the shoulders of my teachers, family, and friends. I express my deepest gratitude to my teachers, especially Dr. Phadke, Mr. Reddy, Mr. Nirmal, and Mrs. Dandekar. I am grateful to have a big supportive family. I owe a great deal of gratitude to my friends, who made this journey possible, especially Anshul, Shashank, Agranya, Bhushan, Digvijay, Amol, Shivraj, Snehil and Arunjot.           
+}
+
+
+\ToCisShort	% use this only for 1-page Table of Contents
+
+\LoFisShort	% use this only for 1-page Table of Figures
+% \emptyLoF	% use this if there is no List of Figures
+
+\LoTisShort	% use this only for 1-page Table of Tables
+% \emptyLoT	% use this if there is no List of Tables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%       BEGIN DOCUMENT...         %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input macros.tex
+\input abbreviations.tex
+
+\begin{document}
+\clearpage
+
+\printacronyms[include-classes=abbrev,name=Abbreviations]
+
+\printacronyms[include-classes=nomencl,name=Nomenclature]
+
+\clearpage
+\chapter*{Publications}
+{
+    \begin{enumerate}
+      \item{Loya, A., Deshpande, S., Purwar, A.``Machine Learning Driven Individualized Gait Rehabilitation: Classification, Prediction, and Mechanism Design", ASME Journal of Engineering in Medical Diagnostics and Therapy, May 2020; 3(2): 021105}
+      \item{Deshpande S, Purwar A. ``Computational Creativity via Assisted Variational Synthesis of Mechanisms using Deep Generative Models", ASME Journal of Mechanical Design 2019; doi :10.1115/1.4044396}
+      \item{Deshpande S, Purwar A. ``A Machine Learning Approach to Kinematic Synthesis of Defect-Free Planar Four-Bar Linkages", Feb 2019, ASME Journal Computing and Information Science in Engineering, doi 10.1115/1.4042325}
+      \item{Deshpande S, Purwar A. ``A Task-Driven Approach to Optimal Synthesis of Planar Four-Bar Linkages for Extended Burmester Problem", ASME Journal of Mechanisms and Robotics. 2017; doi:10.1115/1.4037801}
+      \item{Ge Q. J., Purwar A, Zhao P, Deshpande S. ``A Task-Driven Approach to Unified Synthesis of Planar Four-Bar Linkages Using Algebraic Fitting of a Pencil of G-Manifolds", ASME Journal of Mechanisms and Robotics. 2017; doi:10.1115/1.4037801}
+      \item{Purwar, A., Deshpande S., Ge, Q. J.`MotionGen: Interactive Design and Editing of Planar Four-Bar Motions for Generating Pose and Geometric Constraints", ASME Journal of Mechanism and Robotics, 2017. doi:10.1115/1.4035899}
+    \end{enumerate}
+}
+
+
+\input introduction.tex
+\input jmr-17/JMR-17-1048.tex
+\input jcise-18/idetc2018_journal.tex
+\input jmd-19/jmd_main.tex
+\input jmd-19/task_conditioning.tex
+\input jesmdt-20/cvae.tex
+\input conclusion.tex
+
+%%%%%%%%%   then the Bibliography, if any   %%%%%%%%%
+\bibliographystyle{purwar}	% or "siam", or "alpha", etc.
+\bibliography{references}		% Bib database in "references.bib"
+
+%%%%%%%%%   then the Appendices, if any   %%%%%%%%%
+\appendix
+
+
+
+\end{document}
+

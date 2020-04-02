@@ -1,0 +1,47 @@
+
+\newtheorem{theorem}{Theorem}
+
+
+\newcommand{\diff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\diffr}[1]{\diff{#1}{r}}
+\newcommand{\diffth}[1]{\diff{#1}{\theta}}
+\newcommand{\diffz}[1]{\diff{#1}{z}}
+
+\newcommand{\vth}{V_{\theta}}
+
+\newcommand{\twochoices}[2]{\left\{ \begin{array}{lcc}
+        \displaystyle #1 \\ \vspace{-10pt} \\
+        \displaystyle #2 \end{array} \right. } %}
+
+\newcommand{\threechoices}[3]{\left\{ \begin{array}{lcc}
+        #1 \\ #2 \\ #3 \end{array} \right. }    %}
+
+\newcommand{\fourchoices}[4]{\left\{ \begin{array}{lcc}
+        #1 \\ #2 \\ #3 \\ #4 \end{array} \right. }      %}
+
+\newcommand{\twovec}[2]{\left(\begin{array}{c} #1 \\ #2 \end{array}\right)}
+\newcommand{\threevec}[3]{\left(\begin{array}{c} #1 \\ #2 \\ #3 \end{array}\right)}
+\newcommand{\twomatrix}[4]{\left(\begin{array}{cc} #1 & #2 \\ #3 & #4 \end{array}\right)}
+
+\newcommand{\nothing}{}
+\newcommand{\req}[1]{(\ref{#1})}
+\newcommand{\pos}[1]{\stackrel{+}{#1} \! }
+\newcommand{\half}[1]{\frac{#1}{2}}
+\newcommand{\nhalf}[1]{(\frac{#1}{2})}
+\newcommand{\singleline}{\baselineskip 0pt}
+\newcommand{\expo}[1]{exp$({\bf {#1}})$}
+
+% Subfigure plot
+\makeatletter
+\newcommand{\putindeepbox}[2][0.7\baselineskip]{{%
+    \setbox0=\hbox{#2}%
+    \setbox0=\vbox{\noindent\hsize=\wd0\unhbox0}
+    \@tempdima=\dp0
+    \advance\@tempdima by \ht0
+    \advance\@tempdima by -#1\relax
+    \dp0=\@tempdima
+    \ht0=#1\relax
+    \box0
+}}
+\makeatother
+

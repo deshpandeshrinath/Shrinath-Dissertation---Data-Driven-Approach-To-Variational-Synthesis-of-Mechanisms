@@ -1,0 +1,136 @@
+% probably a good idea for the nomenclature entries:
+\acsetup{first-style=short}
+
+% class `abbrev': abbreviations:
+\DeclareAcronym{vae}{
+  short = VAE,
+  long  = Variational Auto-Encoders,
+  class = abbrev
+}
+\DeclareAcronym{cvae}{
+  short = C-VAE,
+  long  = Conditional Variational Auto-Encoders,
+  class = abbrev
+}
+
+\DeclareAcronym{pose}{
+  short = pose,
+  long  = Combination of position and orientation,
+  class = abbrev
+}
+
+% class `nomencl': nomenclature
+\DeclareAcronym{X}{
+  short = $X$ ,
+  long  = {A general term representing target property of linkage for which the kinematic synthesis is conducted. In case of motion (or path) generation problem, $X$ is coupler motion (or path)},
+  sort  = xcap ,
+  class = nomencl
+}
+
+\DeclareAcronym{x}{
+  short = $x$ ,
+  long  = {represents data observed by generative model},
+  sort  = x ,
+  class = nomencl
+}
+
+
+\DeclareAcronym{z}{
+  short = $z$ ,
+  long  = {Latent Feature Vector},
+  sort  = z,
+  class = nomencl
+}
+\DeclareAcronym{norm}{
+  short = \mathca{N} ,
+  long  = Normal Distribution ,
+  sort  = N ,
+  class = nomencl
+}
+
+\DeclareAcronym{x_task}{
+  short = $X_{\text{task}}$ ,
+  long  = {a general term representing prescribed path for path generation problem, prescribed motion for motion generation problem and prescribed function for function generation problem},
+  sort  = xtask,
+  class = nomencl
+}
+
+\DeclareAcronym{x_path_im}{
+  short = $X_{\text{path image}}$ ,
+  long  = {Image-based representation of path},
+  sort  = xpathimage ,
+  class = nomencl
+}
+
+\DeclareAcronym{x_path_vector}{
+  short = $X_{\text{path vector}}$ ,
+  long  = {Vector representation of path as a sequence of points},
+  sort  = xpathvector ,
+  class = nomencl
+}
+
+\DeclareAcronym{x_motion_vector}{
+  short = $X_{\text{motion vector}}$ ,
+  long  = {Vector representation of motion as a sequence of poses},
+  sort  = xmotionvector ,
+  class = nomencl
+}
+
+\DeclareAcronym{x_fourbar}{
+  short = $X_{\text{fourbar}}$ ,
+  long  = {Vector representation of joint trajectories of fourbar},
+  sort  = xmotionvector ,
+  class = nomencl
+}
+
+
+\DeclareAcronym{x_hat}{
+  short = $\hat{X}$ ,
+  long  = a sample from a distribution computed by approximate marginal inference for a given input task $X_{task}$,
+  sort  = xhat ,
+  class = nomencl
+}
+
+\DeclareAcronym{prior}{
+  short = $\emph{prior}$ ,
+  long  = {a probability distribution that would express one’s beliefs about this quantity before some evidence is taken into account},
+  sort  = prior ,
+  class = nomencl
+}
+
+\DeclareAcronym{context_function}{
+  short = $f_{\text{context}}(X)$ ,
+  long  = {a fitness function in terms of linkage trajectory $X$ },
+  sort  = prior ,
+  class = nomencl
+}
+
+\DeclareAcronym{pxtask}{
+  short = $pr(X|X_{task})$ ,
+  long  = {Distribution of conditioned tasks which are more conducive for defect-free synthesis},
+  sort  = prior ,
+  class = nomencl
+}
+
+\DeclareAcronym{x_hat_context}{
+  short = $\hat{X}_{\text{context}}$ ,
+  long  = {A feasible task which is conditioned for a given context},
+  sort  = xhatcontext ,
+  class = nomencl
+}
+
+\DeclareAcronym{q_x_task}{
+  short = $Q(X_{task})$ ,
+  long  = {Recognition model of a VAE trained to recognize observed distribution of real data $X$},
+  sort  = qx,
+  class = nomencl
+}
+
+
+
+\DeclareAcronym{elbo_loss}{
+  short = $\mathcal{L_{\text{ELBO}}}$ ,
+  long  = {Lower Bound of Marginal Likelihood. },
+  sort  = qx,
+  class = nomencl
+}
