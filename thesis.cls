@@ -1095,7 +1095,7 @@
 	\vspace*{1\baselineskip}
     This dissertation is accepted by the Graduate School\\
     \vspace*{1\baselineskip}
-	Charles Taber\\
+	Eric Wertheimer\\
 	Dean of the Graduate School
 	\end{center}
 	\vspace*{\fill}
